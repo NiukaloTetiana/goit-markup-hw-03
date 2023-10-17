@@ -80,11 +80,11 @@ button {
   letter-spacing: 0.72px;
   text-transform: capitalize;
   text-align: center;
+  padding-top: 120px;
 }
 
 .feature-title {
-  padding-top: 32px;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .feature-text {
@@ -96,7 +96,6 @@ button {
 
 .activities .section-title,
 .team .section-title {
-  padding-top: 120px;
   margin-bottom: 72px;
 }
 
@@ -159,13 +158,14 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    border-bottom: 1px solid var(--frame-color);
 }
 
 .hero {
   background-color: var(--navy-titel-color);
-  padding-bottom: 188px;
+  padding: 188px 0 188px;
+}
+.top-header {
+  border-bottom: 1px solid var(--frame-color);
 }
 
 .hero-titel {
@@ -176,11 +176,10 @@ button {
   line-height: 1.07;
   letter-spacing: 1.12px;
   text-align: center;
-  padding-top: 188px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 48px;
-  width: 496px;
+  max-width: 496px;
 }
 .modal-btn {
   color: var(--primary-theme);
@@ -195,6 +194,9 @@ button {
   padding: 16px 32px;
   display: block;
   margin:0 auto;
+  min-width: 169px;
+  height: 56px;
+  border: none;
 }
 
 .modal-btn:hover,
@@ -232,7 +234,7 @@ button {
   overflow: hidden;
 }
 .about {
-   padding-top: 120px;
+  padding: 120px 0 120px;
 }
 
 .about-list {
@@ -269,6 +271,11 @@ button {
 /* ==========/ACTIVITIES============= */
 
 /* ==============TEAM================ */
+.team-container {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 .team {
   background-color: var(--section-theme);
 }
@@ -286,8 +293,6 @@ button {
 .team-list {
   display: flex;
   gap: 24px;
-  justify-content: center;
-  align-items: center;
   text-align: center;
 }
 /* =============/TEAM================ */
@@ -299,6 +304,16 @@ button {
   gap: 24px;
   padding-top: 96px;
   padding-bottom: 72px;
+}
+
+.filter {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+.button-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 72px;
 }
 
 .filter-btn {
@@ -314,7 +329,7 @@ button {
   display: block;
   text-align: center;
   margin: 0 auto;
-  border: 1px solid var (--frame-color);
+  border: 1px solid var(--frame-color);
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
     0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
@@ -323,6 +338,7 @@ button {
 .filter-btn:focus {
   background-color: var(--accent-color);
   color: var(--primary-theme);
+  border: 1px solid transparent;
 }
 
 .filter-link .feature-title {
@@ -337,7 +353,7 @@ button {
 }
 
 .container-filter {
-  padding: 0px 16px;
+  padding: 32px 16px;
   border-right: 1px solid var(--frame-color);
   border-left: 1px solid var(--frame-color);
   border-bottom: 1px solid var(--frame-color);
@@ -353,8 +369,7 @@ button {
   background-color: var(--navy-titel-color);
   flex-direction: column;
   display: block; 
-  padding-top: 101px;
-  padding-bottom: 100px;
+  padding: 100px 0 100px;
 }
 
 .footer-text {
@@ -368,7 +383,8 @@ button {
   margin: auto;
 }
 .logo-studio-footer {
+  display: inline-block;
   color: var(--section-theme);
-  padding-bottom: 18px;
+  margin-bottom: 16px;
 }
 /* ============/FOOTER=============== */
