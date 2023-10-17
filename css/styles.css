@@ -264,7 +264,7 @@ button {
 
 /* ===========ACTIVITIES============= */
 .activities {
-  margin-bottom: 120px;
+  padding-bottom: 120px;
 }
 .activities-list {
   display: flex;
