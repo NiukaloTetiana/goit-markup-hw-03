@@ -234,7 +234,7 @@ button {
   overflow: hidden;
 }
 .about {
-  padding: 120px 0 120px;
+  padding-top: 120px;
 }
 
 .about-list {
@@ -266,12 +266,12 @@ button {
   justify-content: space-between;
   text-align: center;
   gap: 24px;
-  margin-bottom: 120px;
+  padding-bottom: 120px;
 }
 /* ==========/ACTIVITIES============= */
 
 /* ==============TEAM================ */
-.team-container {
+.container-team {
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -298,21 +298,15 @@ button {
 /* =============/TEAM================ */
 
 /* ==============FILTER============== */
-.button-list {
-  display:inline-flex;
-  /* align-items: center; */
-  gap: 24px;
-  padding-top: 96px;
-  padding-bottom: 72px;
-}
-
 .filter {
   padding-top: 96px;
   padding-bottom: 120px;
 }
+
 .button-list {
   display: flex;
   justify-content: center;
+  gap: 24px;
   margin-bottom: 72px;
 }
 
@@ -379,12 +373,9 @@ button {
   width: 264px;
 }
 
-.web-footer {
-  margin: auto;
-}
 .logo-studio-footer {
-  display: inline-block;
   color: var(--section-theme);
+  display: inline-block;
   margin-bottom: 16px;
 }
 /* ============/FOOTER=============== */
