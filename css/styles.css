@@ -49,8 +49,9 @@ p {
 main {
   flex-grow: 1;
 }
-/* =========/NORMOLIZE=========== */
+/* ==========/NORMOLIZE============ */
 
+/* =============BASIC============== */
 body {
   background-color: var(--primary-theme);
   color: var(--main-text-color);
@@ -80,7 +81,6 @@ button {
   letter-spacing: 0.72px;
   text-transform: capitalize;
   text-align: center;
-  padding-top: 120px;
 }
 
 .feature-title {
@@ -98,6 +98,7 @@ button {
 .team .section-title {
   margin-bottom: 72px;
 }
+/* ============/BASIC============== */
 
 /* =============LOGO=============== */
 .logo {
@@ -235,6 +236,7 @@ button {
 }
 .about {
   padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .about-list {
@@ -261,23 +263,26 @@ button {
 /* ==============/ABOUT============== */
 
 /* ===========ACTIVITIES============= */
+.activities {
+  padding-bottom: 120px;
+}
 .activities-list {
   display: flex;
   justify-content: space-between;
   text-align: center;
   gap: 24px;
-  padding-bottom: 120px;
 }
 /* ==========/ACTIVITIES============= */
 
 /* ==============TEAM================ */
-.container-team {
+.team-container {
   padding-top: 32px;
   padding-bottom: 32px;
 }
 
 .team {
   background-color: var(--section-theme);
+  padding-top: 120px;
 }
 
 .team-card {
