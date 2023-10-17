@@ -22,6 +22,8 @@ img {
 
 .list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .link {
@@ -41,16 +43,9 @@ h4,
 h5,
 h6,
 p {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
 }
 
-ul,
-ol {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-}
 main {
   flex-grow: 1;
 }
@@ -64,13 +59,45 @@ body {
   font-style: normal;
   letter-spacing: 0.32px;
   line-height: 1.5;
-  min-height: 100vh;
 }
 
 .container {
-    max-width: 1158px;
+    width: 1158px;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+button {
+  font-family: inherit;
+  line-height: inherit;
+}
+
+.section-title {
+  color: var(--navy-titel-color);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.72px;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.feature-title {
+  padding-top: 32px;
+  padding-bottom: 8px;
+}
+
+.feature-text {
+  color: var(--main-text-color);
+
+  font-size: 16px;
+  padding-bottom: 32px;
+}
+
+.activities .section-title,
+.team .section-title {
+  padding-top: 120px;
+  margin-bottom: 72px;
 }
 
 /* =============LOGO=============== */
@@ -84,18 +111,11 @@ body {
   letter-spacing: 0.54px;
   text-transform: uppercase;
   display: inline-flex;
-  padding-top: 21px;
-  padding-left: 44px;
-  flex-shrink: 0;
   margin-right: 76px;
-  margin-bottom: 26px;
 }
 
 .logo-studio {
   color: var(--navy-titel-color);
-}
-.logo-studio-footer {
-  color: var(--section-theme);
 }
 /* ============/LOGO============== */
 
@@ -104,6 +124,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: flex-start;
   gap: 40px;
 }
 
@@ -114,8 +139,8 @@ body {
 
 .address-item {
   display: flex;
+  text-align: center;
   gap: 40px;
-  align-items: center;
 }
 
 .address-link {
@@ -130,10 +155,17 @@ body {
 /* ==========/NAVIGATION=========== */
 
 /* ==============HERO=============== */
+ .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid var(--frame-color);
+}
+
 .hero {
   background-color: var(--navy-titel-color);
-  /* margin: 0 0 292px;
-  padding: 188px 472px; */
+  padding-bottom: 188px;
 }
 
 .hero-titel {
@@ -144,23 +176,25 @@ body {
   line-height: 1.07;
   letter-spacing: 1.12px;
   text-align: center;
+  padding-top: 188px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 48px;
+  width: 496px;
 }
 .modal-btn {
   color: var(--primary-theme);
   background-color: var(--brand-color);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 
-  font-family: inherit;
   font-size: 16px;
   font-weight: 500;
-  line-height: inherit;
   letter-spacing: 0.64px;
   cursor: pointer;
   border-radius: 4px;
   padding: 16px 32px;
-  align-items: flex-start;
-  gap: 10px;
+  display: block;
+  margin:0 auto;
 }
 
 .modal-btn:hover,
@@ -168,16 +202,14 @@ body {
   background-color: var(--accent-color);
 }
 
-
-/* .menu-item {
-  padding-right: 40px;
-} */
-
 .menu-link {
   color: var(--navy-titel-color);
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .menu-link:hover,
@@ -199,26 +231,40 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.about {
+   padding-top: 120px;
+}
 
+.about-list {
+  display: flex;
+  gap: 24px;
+}
 
-.feature-text {
-  color: var(--main-text-color);
+.about-link {
+  width: calc((100% - 72px) / 4);
+}
 
-  font-size: 16px;
-  margin-bottom: 120px;
+.about .feature-title {
+  color: var(--navy-titel-color);
+
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+  margin-bottom: 8px;
+}
+.about .feature-text {
+  padding-bottom: 0;
 }
 /* ==============/ABOUT============== */
 
 /* ===========ACTIVITIES============= */
-
-.section-title {
-  color: var(--navy-titel-color);
+.activities-list {
+  display: flex;
+  justify-content: space-between;
   text-align: center;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.11;
-  letter-spacing: 0.72px;
-  text-transform: capitalize;
+  gap: 24px;
+  margin-bottom: 120px;
 }
 /* ==========/ACTIVITIES============= */
 
@@ -227,52 +273,47 @@ body {
   background-color: var(--section-theme);
 }
 
-.team-link {
+.team-card {
   background-color: var(--primary-theme);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-}
-.team-link img {
-  margin-bottom: 32px;
-}
-
-.team-link .feature-title {
-  margin-bottom: 8px;
-  text-align: center;
+  margin-bottom: 100px;
+  width: calc((100% - 72px) / 3);
 }
 
-.team-link .feature-text {
-  margin-bottom: 32px;
+.team-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 /* =============/TEAM================ */
 
 /* ==============FILTER============== */
 .button-list {
-  display: inline-flex;
-  align-items: flex-start;
+  display:inline-flex;
+  /* align-items: center; */
   gap: 24px;
-  text-align: center;
-  padding: 96px 472px;
-  margin-bottom: 72px;
+  padding-top: 96px;
+  padding-bottom: 72px;
 }
+
 .filter-btn {
   color: var(--brand-color);
   background-color: var(--section-theme);
 
-  text-align: center;
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.64px;
-  font-family: inherit;
-  line-height: inherit;
   cursor: pointer;
   border-radius: 4px;
-  display: flex;
   padding: 12px 24px;
-  align-items: flex-start;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
   border: 1px solid var (--frame-color);
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
     0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
@@ -284,116 +325,47 @@ body {
   color: var(--primary-theme);
 }
 
+.filter-link .feature-title {
+  color: var(--navy-titel-color);
+}
 
+.filter-list {
+  display: flex;
+  padding-bottom: 120px;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+}
+
+.container-filter {
+  padding: 0px 16px;
+  border-right: 1px solid var(--frame-color);
+  border-left: 1px solid var(--frame-color);
+  border-bottom: 1px solid var(--frame-color);
+}
+
+.filter-item {
+  width: calc((100% - 48px) / 3);
+}
 /* =============/FILTER============== */
 
 /* =============FOOTER=============== */
+.footer {
+  background-color: var(--navy-titel-color);
+  flex-direction: column;
+  display: block; 
+  padding-top: 101px;
+  padding-bottom: 100px;
+}
+
 .footer-text {
   color: var(--section-theme);
 
   font-size: 16px;
+  width: 264px;
 }
 
+.logo-studio-footer {
+  color: var(--section-theme);
+  padding-bottom: 18px;
+}
 /* ============/FOOTER=============== */
-
-
-.top-header .container {
-  border-bottom: 1px solid var(--frame-color);
-  display: flex;
-  justify-content: space-between;
-  padding: 26px 156px;
-}
-
-.footer .container {
-    background-color: var(--navy-titel-color);
-
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 140px 1020px 100px 156px;
-}
-
-.menu {
-    display: flex;
-    align-items: flex-start;
-    gap: 40px;
-}
-.filter-link img {
-  margin-bottom: 32px;
-}
-
-.filter-link .feature-title {
-  margin-bottom: 8px;
-}
-
-.filter-link .feature-text {
-  margin-bottom: 32px;
-}
-
-.filter-item {
-  padding: 0px 16px;
-  gap: 8px;
-  align-self: stretch;
-box-sizing: border-box;
-flex-direction: row;
-}
-.filter-list {
-  display: flex;
-  align-items: flex-start;
-  padding-bottom: 0;
-  flex-direction: column;
-  gap: 32px;
-  flex-shrink: 0;
-  border: 1px solid var(--frame-color);
-}
-.team-list {
-    gap: 32px;
-    display: inline-flex;
-    padding: 120px 156px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.about .container {
-    display: inline-flex;
-    justify-content: space-between;
-    padding: 120px 156px;
-}
-
-.about .feature-title {
-    color: var(--navy-titel-color);
-
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: 0.4px;
-    display: inline-flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.about-list {
-    display: flex;
-    justify-content: space-between;
-    gap: 24px;
-}
-
-.activities {
-    padding: 559px 120px 558px;
-}
-
-.activities .section-title,
-.team .section-title {
-    padding-top: 120px;
-    margin-bottom: 72px;
-}
-
-.activities-list {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    gap: 24px;
-    margin-bottom: 120px;
-}
