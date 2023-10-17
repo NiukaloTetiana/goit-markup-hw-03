@@ -364,6 +364,9 @@ button {
   width: 264px;
 }
 
+.web-footer {
+  margin: auto;
+}
 .logo-studio-footer {
   color: var(--section-theme);
   padding-bottom: 18px;
