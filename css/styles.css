@@ -285,7 +285,7 @@ button {
 .team {
   background-color: var(--section-theme);
   padding-top: 120px;
-  padding-bottom: 100px;
+  padding-bottom: 120px;
 }
 
 .team-card {
@@ -368,7 +368,7 @@ button {
 }
 
 .logo-footer {
-  display: inline-flex;
+  display: inline-block;
   margin-right: 0;
   margin-bottom: 16px;
 }
